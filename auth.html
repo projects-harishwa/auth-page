@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <title>Login</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+
+    <div class="login">
+        <img src="bg1.jpg">
+        <ion-icon name="chevron-down-circle"></ion-icon>
+        <h3>Login to your account</h3>
+        <form>
+            
+            <input placeholder="Username*" required type="text" id="username_login"><br>
+
+            <input placeholder="Password*" required type="password" id="password_login"><br>
+
+            <!-- <a href="#consumer" class="goback">Go Back</a> -->
+
+            <button type="button" onclick="login()">Login</button>
+            <a href="#create">New user? Sign up!</a>
+        </form>
+    </div>
+
+
+    <div class="create" id="create">
+        <img src="bg1.jpg">
+        <ion-icon name="chevron-down-circle"></ion-icon>
+        <h2>Create a new account</h2>
+        <form>
+            
+            <input placeholder="Username*" required type="text" id="username"><br>
+
+            <input placeholder="Email*" required type="text" id="email"><br>
+            
+            <input placeholder="Email-OTP*" required type="text" id="otp"><br>
+
+            <input placeholder="Password*" required type="password" id="password"><br>
+
+            <input placeholder="Confirm password*" required type="password" id="confirmpassword"><br>
+
+            <!-- <a href="#consumer" class="goback">Go Back</a> -->
+
+            <button type="button" onclick="signUp()">Sign Up</button>
+
+            <a href="#">Go back</a>
+        </form>
+    </div>
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+</body>
+</html>

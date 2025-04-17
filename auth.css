@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(bg1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+  backdrop-filter: blur(5px);
+}
+html 
+{
+  scroll-behavior: smooth;
+}
+.create {
+  background-color: rgba(85, 85, 85, 0.95);
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 1px 1px 20px black;
+  text-align: center;
+  position: absolute;
+  top: 150%;
+  transform: scale(0.8);
+}
+
+.create img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.create ion-icon {
+  font-size: 2.5em;
+  color: #fff;
+  margin: 15px 0;
+  transform: translateY(-40px);
+}
+
+h2 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 1.4em;
+  transform: translateY(-30px);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.create form button 
+{
+  font-size: 1.3em;
+}
+form input {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-weight: 600;
+  background-color: #f1f1f1;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 1px 1px 10px white;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+.login a, .create a
+{
+  color: #fff;
+  font-size: 0.9em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.login
+{
+  background-color: rgba(85, 85, 85, 0.95);
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 1px 1px 20px black;
+  text-align: center;
+}
+.login img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+h3 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 1.4em;
+  transform: translateY(-30px);
+}
+.login ion-icon {
+  font-size: 2.5em;
+  color: #fff;
+  margin: 15px 0;
+  transform: translateY(-40px);
+}
+.create form a 
+{
+  margin-top: 50px;
+  font-size: 1.2em;
+}
