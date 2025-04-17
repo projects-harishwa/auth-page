@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmers Login</title>
+    <link rel="stylesheet" href="farmers_auth().css">
+</head>
+<body>
+
+    <div class="login">
+        <img src="bg1.jpg">
+        <ion-icon name="chevron-down-circle"></ion-icon>
+        <h2>Login to your account</h2>
+        <form>
+            <!-- DONT CHANGE ID NAME + DONT ALTER-->
+            <input placeholder="Farmer ID*" required type="text" id="farmerid" maxlength="12" pattern="\d{12}" ><br>
+
+            <!-- DONT CHANGE ID NAME + DONT ALTER -->
+            <input type="tel" id="mobile" maxlength="10" pattern="\d{10}" placeholder="Enter 10-digit mobile" required oninput="checkPhoneNumber()">
+            
+            <a id="sendotp" onclick="sendotp()">Send OTP</a> <!-- DONT ALTER THIS -->
+            
+            <input placeholder="Mobile - OTP*" required type="text" id="otp" disabled><br> <!-- DONT CHANGE ID NAME + DONT ALTER -->
+
+            <button type="button" onclick="login()">Login</button>
+        </form>
+    </div>
+    
+
+    <!-- Icons not to be modified -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+    <!-- Just animation for the text boxes -->
+    <script>
+    const otp = document.getElementById("otp");
+    const mobile = document.getElementById("mobile");
+    const farmerid = document.getElementById("farmerid");
+
+    mobile.addEventListener("input", function () {
+        this.value = this.value.replace(/\D/g, ''); // Only digits
+        if (this.value.length > 10) {
+            this.value = this.value.slice(0, 10); // Max 10 digits
+        }
+    });
+    
+    farmerid.addEventListener("input", function () {
+        this.value = this.value.replace(/\D/g, ''); // Only digits
+        if (this.value.length > 12) {
+            this.value = this.value.slice(0, 12); // Max 12 digits
+        }
+    });
+
+    function checkPhoneNumber()
+        {
+            let mobile=document.getElementById("mobile")
+            let sendotp=document.getElementById("sendotp")
+            
+            mobile.value = mobile.value.replace(/\D/g, '').slice(0, 10)
+
+            sendotp.style.opacity="0%";
+            if(mobile.value.length===10){
+                sendotp.style.marginTop="50px"
+                sendotp.style.opacity="100%";
+                sendotp.style.visibility="visible"
+            }
+            else{
+                sendotp.style.marginTop="0px"
+                sendotp.style.opacity="0%";
+                sendotp.style.visibility="hidden"
+            }
+        }
+
+    function sendotp()
+    {
+        var otp=document.getElementById("otp")
+        otp.style.opacity="100%"
+        document.getElementById("otp").disabled = false;
+    }
+
+    </script>
+</body>
+</html>
